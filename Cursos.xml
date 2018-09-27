@@ -1,0 +1,10 @@
+<Cursos>
+    <Curso>
+        <Nombre>Lenguajes Comp e Inter</Nombre>
+        <Codigo>CE1104</Codigo>
+        <Tema>Imperativo</Tema>
+        <Tema>Funcional</Tema>
+        <Tema>Objetos</Tema>
+    </Curso>
+
+</Cursos>
