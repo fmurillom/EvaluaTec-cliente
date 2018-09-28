@@ -16,7 +16,7 @@ public final class Globals {
 
     private static String warning;
 
-    private static Thread server;
+    private static Stack<String> messages;
 
     public Globals(){
         themesEv = new LinkedList<>();
@@ -26,8 +26,7 @@ public final class Globals {
 
         warning = "";
 
-        server = new Thread(new Server());
-        server.start();
+        messages = new Stack<>();
 
     }
 
@@ -56,4 +55,10 @@ public final class Globals {
     public static void setPreguntaGen(Pregunta preg){
         preguntaGen = preg;
     }
+
+    public static void pushQ(String add){messages.push(add);}
+
+    public static String popQ(){return messages.pop();}
+
+    public static boolean qEmpty(){return messages.empty();}
 }

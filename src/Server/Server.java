@@ -1,12 +1,17 @@
 package Server;
-import java.io.*;
-import java.net.*;
-import java.util.LinkedList;
-import java.util.Stack;
+import logic.Globals;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.concurrent.TimeUnit;
 
 public class Server implements Runnable{
-    static final int QueueSize = 6;
-    private Stack<String> messages = new Stack<>();
+
 
     /**
      * Function to run the server, in charge of all interchange between server and
@@ -27,9 +32,12 @@ public class Server implements Runnable{
                     new BufferedReader(
                             new InputStreamReader(socket.getInputStream()));
             while(true){
-                if(messages.empty()) this.wait();
-                toServer.println(messages.pop());
+                while(Globals.qEmpty()) {TimeUnit.SECONDS.sleep(1);}
+                System.out.printf("Sending to server \n");
+                toServer.println(Globals.popQ());
+                //Read line from server
                 String line = fromServer.readLine();
+                System.out.println("Response: "+line);
                 //Aqui van los if de lo que retorne el servidor
             }
 
@@ -42,14 +50,5 @@ public class Server implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * Adds new parameters to the stack
-     * @param toAdd parameter to be added
-     */
-    public void addQueue(String toAdd){
-        notify();
-        messages.push(toAdd);
     }
 }

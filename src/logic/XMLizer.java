@@ -12,6 +12,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -109,6 +110,11 @@ public class XMLizer {
         ms.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         ms.marshal(preg, System.out);
         ms.marshal(preg, new File("../GenPreg.xml"));
+        java.io.OutputStream ans = new ByteArrayOutputStream(4090);
+        ms.marshal(preg, ans);
+        String anstring = ans.toString();
+        Globals.pushQ(anstring);
+        //System.out.println("This is ans:" + anstring);
     }
 
     public static void marshallPreguntaX(MargueX preg) throws JAXBException {
@@ -117,7 +123,11 @@ public class XMLizer {
         ms.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         ms.marshal(preg, System.out);
         ms.marshal(preg, new File("GenPreg.xml"));
-
+        java.io.OutputStream ans = new ByteArrayOutputStream(4090);
+        ms.marshal(preg, ans);
+        String anstring = ans.toString();
+        Globals.pushQ(anstring);
+        //System.out.println("This is ans:" + anstring);
     }
 
 }
