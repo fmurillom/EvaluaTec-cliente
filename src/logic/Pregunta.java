@@ -4,6 +4,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Pregunta")
+/**
+ * Clase encargada de modelar el comportamiento de una pregunta ya sea de desarrollo o de respuesta corta.
+ */
 public class Pregunta {
 
     private String enunciado;

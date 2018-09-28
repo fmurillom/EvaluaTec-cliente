@@ -6,6 +6,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @XmlRootElement(name = "Cursos")
+/**
+ * Clase encargada de representrar un Curso en el sistema
+ */
 public class Curso {
 
 

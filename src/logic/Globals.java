@@ -4,6 +4,9 @@ import Server.Server;
 
 import java.util.*;
 
+/**
+ * Clase global estatica para almacenar variables globales
+ */
 public final class Globals {
 
     private static List<Themes> themesEv;
@@ -18,6 +21,8 @@ public final class Globals {
 
     private static Stack<String> messages;
 
+    private static List<Universidad> unis;
+
     public Globals(){
         themesEv = new LinkedList<>();
         cursos = new LinkedList<>();
@@ -27,6 +32,8 @@ public final class Globals {
         warning = "";
 
         messages = new Stack<>();
+
+        unis = new LinkedList<>();
 
     }
 
@@ -54,6 +61,14 @@ public final class Globals {
 
     public static void setPreguntaGen(Pregunta preg){
         preguntaGen = preg;
+    }
+
+    public static List<Universidad> getUnis() {
+        return unis;
+    }
+
+    public static void setUnis(List<Universidad> unis) {
+        Globals.unis = unis;
     }
 
     public static void pushQ(String add){messages.push(add);}

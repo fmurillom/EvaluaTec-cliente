@@ -2,6 +2,9 @@ package logic;
 
 import java.util.Objects;
 
+/**
+ * Clase utilizada para el modelado de la representacion y comportamiento de un tema a evaluar y la cantidad de items que deberia tener.
+ */
 public class Themes {
 
     private String name;

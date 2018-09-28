@@ -48,6 +48,9 @@ public class markXCont {
 
 
     @FXML
+    /**
+     * Funcion encargada de generar xml de pregunta y enviarlo al servidor para crear una pregunta nueva
+     */
     private void addQuest(){
         Themes themes = null;
 
