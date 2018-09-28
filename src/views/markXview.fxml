@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="270.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.markXCont">
+<AnchorPane prefHeight="270.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.markXCont">
    <children>
       <Label layoutX="83.0" layoutY="93.0" prefHeight="16.0" prefWidth="171.0" text="Numero de Preguntas" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="346.0" AnchorPane.topAnchor="93.0" />
       <Spinner fx:id="sliderNum" layoutX="254.0" layoutY="88.0" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="88.0" />
