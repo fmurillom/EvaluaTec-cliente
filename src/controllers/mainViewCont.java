@@ -65,6 +65,9 @@ public class mainViewCont {
     @FXML
     private ComboBox<String> cbxGrado;
 
+    @FXML
+    private ComboBox<String> cbxTipo;
+
 
     public mainViewCont(){};
 
@@ -83,6 +86,12 @@ public class mainViewCont {
         grado.add("Quiz");
 
         grado.add("Examen");
+
+        List<String> tipo = new LinkedList<>();
+
+        tipo.add("Respuesta Corta");
+
+        tipo.add("Desarrollo");
 
         cursos = XMLizer.getXMLCursos("Cursos", "Curso");
 
@@ -104,6 +113,11 @@ public class mainViewCont {
         ObservableList<String> comboGrado = FXCollections.observableArrayList(grado);
 
         cbxGrado.setItems(comboGrado);
+
+        ObservableList<String> comboTipo = FXCollections.observableArrayList(tipo);
+
+        cbxTipo.setItems(comboTipo);
+
 
 
     }
@@ -252,6 +266,11 @@ public class mainViewCont {
             Globals.setPreguntaGen(preg);
 
             XMLizer.marshallPreguntaX(preg);
+        }else{
+            Pregunta pregunta = new Pregunta(txtPreg.getText(), txtCom.getText(), txtResp.getText(), cbxGrado.getValue(),
+                    cbxTipo.getValue(), cmbTema.getValue(), cmbCourse.getValue());
+            Globals.setPreguntaGen(pregunta);
+            XMLizer.marshallPregunta(pregunta);
         }
     }
 

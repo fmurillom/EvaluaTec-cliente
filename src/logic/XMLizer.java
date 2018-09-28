@@ -108,7 +108,7 @@ public class XMLizer {
         Marshaller ms = jc.createMarshaller();
         ms.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         ms.marshal(preg, System.out);
-        ms.marshal(preg, new File("../GenPreg.xml"));
+        ms.marshal(preg, new File("../GenPreg2.xml"));
     }
 
     public static void marshallPreguntaX(MargueX preg) throws JAXBException {
