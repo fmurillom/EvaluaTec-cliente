@@ -19,8 +19,6 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Thread Server = new Thread(new Server());
-        Server.start();
         launch(args);
     }
 }

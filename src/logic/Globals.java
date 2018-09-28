@@ -1,5 +1,7 @@
 package logic;
 
+import Server.Server;
+
 import java.util.*;
 
 public final class Globals {
@@ -14,6 +16,8 @@ public final class Globals {
 
     private static String warning;
 
+    private static Thread server;
+
     public Globals(){
         themesEv = new LinkedList<>();
         cursos = new LinkedList<>();
@@ -21,6 +25,9 @@ public final class Globals {
         selectedCourse = "";
 
         warning = "";
+
+        server = new Thread(new Server());
+        server.start();
 
     }
 

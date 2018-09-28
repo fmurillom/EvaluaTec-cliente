@@ -117,6 +117,7 @@ public class XMLizer {
         ms.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         ms.marshal(preg, System.out);
         ms.marshal(preg, new File("GenPreg.xml"));
+
     }
 
 }
