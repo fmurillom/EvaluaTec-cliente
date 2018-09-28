@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane alignment="center" hgap="10" maxHeight="358.0" maxWidth="768.0" minHeight="358.0" minWidth="768.0" onMouseEntered="#refreshTree" prefHeight="358.0" prefWidth="768.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainViewCont">
+<GridPane alignment="center" hgap="10" maxHeight="556.0" maxWidth="768.0" minHeight="358.0" minWidth="768.0" onMouseEntered="#refreshTree" prefHeight="556.0" prefWidth="768.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainViewCont">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -29,7 +29,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <TabPane prefHeight="419.0" prefWidth="838.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="550.0" prefWidth="758.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Crear Prueba">
                <content>
@@ -46,24 +46,33 @@
                         </TitledPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <HBox layoutX="88.0" layoutY="245.0" prefWidth="200.0" spacing="60.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="245.0">
+                              <HBox layoutX="88.0" layoutY="245.0" prefHeight="61.0" prefWidth="200.0" spacing="60.0" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="245.0">
                                  <children>
                                     <CheckBox id="chkEx" mnemonicParsing="false" text="Examen" />
                                     <CheckBox id="chkQz" mnemonicParsing="false" text="Quiz" />
                                  </children>
                               </HBox>
-                              <VBox fillWidth="false" layoutX="83.0" layoutY="45.0" prefHeight="200.0" prefWidth="210.0" spacing="50.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="45.0">
+                              <VBox fillWidth="false" layoutX="83.0" layoutY="45.0" prefHeight="268.0" prefWidth="210.0" spacing="50.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="45.0">
                                  <children>
                                     <Button id="btnRc" fx:id="btnRc" mnemonicParsing="false" onAction="#respC" text="Crear Respuesta Corta" />
                                     <Button id="btnMx" mnemonicParsing="false" onAction="#markX" text="Crear Marque con X" />
                                     <Button id="btnD" mnemonicParsing="false" onAction="#dess" text="Crear Desarrollo" />
+                                    <CheckBox fx:id="chkResp" mnemonicParsing="false" text="Respuestas" />
                                  </children>
                                  <padding>
                                     <Insets top="1.0" />
                                  </padding>
                               </VBox>
-                              <Button layoutX="127.0" layoutY="274.0" mnemonicParsing="false" text="Generar Prueba" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="274.0" />
-                              <ComboBox fx:id="cmbCurso" layoutX="83.0" layoutY="14.0" prefWidth="150.0" AnchorPane.bottomAnchor="275.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="14.0" />
+                              <Button layoutX="128.0" layoutY="469.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="Generar Prueba" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="469.0" />
+                              <ComboBox fx:id="cmbCurso" layoutX="83.0" layoutY="14.0" prefHeight="22.0" prefWidth="150.0" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="14.0" />
+                              <ComboBox fx:id="cmbUni" layoutX="113.0" layoutY="313.0" onAction="#fillCmb" prefWidth="150.0" />
+                              <Label layoutX="14.0" layoutY="318.0" text="Universidad" />
+                              <ComboBox fx:id="cmbAreaA" layoutX="138.0" layoutY="349.0" prefWidth="150.0" />
+                              <Label layoutX="22.0" layoutY="354.0" text="Area Academica" />
+                              <ComboBox fx:id="cmbEscuela" layoutX="138.0" layoutY="381.0" prefWidth="150.0" />
+                              <Label layoutX="28.0" layoutY="386.0" text="Escuela" />
+                              <TextField fx:id="txtSemestre" layoutX="122.0" layoutY="416.0" />
+                              <Label layoutX="28.0" layoutY="421.0" text="Semestre" />
                            </children>
                         </AnchorPane>
                     </items>
@@ -74,42 +83,33 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ComboBox fx:id="cmbCourse" layoutX="104.0" layoutY="14.0" onAction="#refreshCbx" prefWidth="150.0" AnchorPane.bottomAnchor="275.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="504.0" AnchorPane.topAnchor="14.0" />
-                        <Label layoutX="14.0" layoutY="19.0" prefHeight="16.0" prefWidth="62.0" text="Curso :" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="682.0" AnchorPane.topAnchor="19.0" />
-                        <ComboBox fx:id="cmbTema" layoutX="104.0" layoutY="79.0" prefWidth="150.0" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="504.0" AnchorPane.topAnchor="79.0" />
-                        <Label layoutX="14.0" layoutY="84.0" prefHeight="16.0" prefWidth="62.0" text="Tema:" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="682.0" AnchorPane.topAnchor="84.0" />
+                        <ComboBox fx:id="cmbCourse" layoutX="97.0" layoutY="51.0" onAction="#refreshCbx" prefHeight="19.0" prefWidth="150.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="511.0" AnchorPane.topAnchor="51.0" />
+                        <Label layoutX="14.0" layoutY="19.0" prefHeight="30.0" prefWidth="62.0" text="Curso :" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="682.0" AnchorPane.topAnchor="19.0" />
+                        <ComboBox fx:id="cmbTema" layoutX="104.0" layoutY="106.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.bottomAnchor="455.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="504.0" AnchorPane.topAnchor="106.0" />
+                        <Label layoutX="14.0" layoutY="84.0" prefHeight="23.0" prefWidth="62.0" text="Tema:" AnchorPane.bottomAnchor="418.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="682.0" AnchorPane.topAnchor="84.0" />
                         <CheckBox fx:id="chkX" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#ActivateCheckBox" text="Marque con X" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="630.0" AnchorPane.topAnchor="149.0" />
-                        <TextField fx:id="txtBxA" disable="true" layoutX="8.0" layoutY="259.0" prefHeight="26.0" prefWidth="74.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="676.0" AnchorPane.topAnchor="259.0" />
-                        <TextField fx:id="txtBxB" disable="true" layoutX="89.0" layoutY="259.0" prefHeight="26.0" prefWidth="75.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="594.0" AnchorPane.topAnchor="259.0" />
-                        <TextField fx:id="txtBxD" disable="true" layoutX="254.0" layoutY="259.0" prefHeight="26.0" prefWidth="78.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="259.0" />
-                        <TextField fx:id="txtBxC" disable="true" layoutX="172.0" layoutY="259.0" prefHeight="26.0" prefWidth="78.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="259.0" />
-                        <Label layoutX="260.0" layoutY="234.0" text="Opcion D" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="438.0" AnchorPane.topAnchor="234.0" />
-                        <Label layoutX="15.0" layoutY="234.0" text="Opcion A" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="683.0" AnchorPane.topAnchor="234.0" />
-                        <Label layoutX="97.0" layoutY="234.0" text="Opcion B" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="601.0" AnchorPane.topAnchor="234.0" />
-                        <Label layoutX="179.0" layoutY="234.0" text="Opcion C" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="519.0" AnchorPane.topAnchor="234.0" />
-                        <TextArea fx:id="txtPreg" layoutX="489.0" layoutY="5.0" prefHeight="111.0" prefWidth="246.0" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="489.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="5.0" />
-                        <Label layoutX="356.0" layoutY="11.0" prefHeight="16.0" prefWidth="98.0" text="Pregunta:" AnchorPane.bottomAnchor="288.0" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="304.0" AnchorPane.topAnchor="11.0" />
-                        <TextArea fx:id="txtResp" layoutX="489.0" layoutY="128.0" prefHeight="93.0" prefWidth="249.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="489.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="128.0" />
+                        <TextField fx:id="txtBxA" disable="true" layoutX="8.0" layoutY="414.0" prefHeight="26.0" prefWidth="74.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="676.0" AnchorPane.topAnchor="414.0" />
+                        <TextField fx:id="txtBxB" disable="true" layoutX="91.0" layoutY="417.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="592.0" AnchorPane.topAnchor="417.0" />
+                        <TextField fx:id="txtBxD" disable="true" layoutX="254.0" layoutY="419.0" prefHeight="26.0" prefWidth="74.0" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="419.0" />
+                        <TextField fx:id="txtBxC" disable="true" layoutX="172.0" layoutY="419.0" prefHeight="66.0" prefWidth="74.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="512.0" AnchorPane.topAnchor="419.0" />
+                        <Label layoutX="254.0" layoutY="345.0" prefHeight="18.0" prefWidth="60.0" text="Opcion D" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="444.0" AnchorPane.topAnchor="345.0" />
+                        <Label layoutX="15.0" layoutY="337.0" prefHeight="20.0" prefWidth="60.0" text="Opcion A" AnchorPane.bottomAnchor="173.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="683.0" AnchorPane.topAnchor="337.0" />
+                        <Label layoutX="104.0" layoutY="339.0" prefHeight="21.0" prefWidth="60.0" text="Opcion B" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="594.0" AnchorPane.topAnchor="339.0" />
+                        <Label layoutX="179.0" layoutY="338.0" prefHeight="28.0" prefWidth="60.0" text="Opcion C" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="519.0" AnchorPane.topAnchor="338.0" />
+                        <TextArea fx:id="txtPreg" layoutX="489.0" layoutY="5.0" prefHeight="30.0" prefWidth="246.0" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="489.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="5.0" />
+                        <Label layoutX="356.0" layoutY="11.0" prefHeight="30.0" prefWidth="98.0" text="Pregunta:" AnchorPane.bottomAnchor="516.0" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="304.0" AnchorPane.topAnchor="11.0" />
+                        <TextArea fx:id="txtResp" layoutX="489.0" layoutY="103.0" prefHeight="98.0" prefWidth="246.0" AnchorPane.bottomAnchor="361.0" AnchorPane.leftAnchor="489.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="103.0" />
                         <Label layoutX="356.0" layoutY="128.0" text="Respuesta:" />
-                        <TextArea fx:id="txtCom" layoutX="486.0" layoutY="250.0" prefHeight="60.0" prefWidth="252.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="486.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+                        <TextArea fx:id="txtCom" layoutX="486.0" layoutY="250.0" prefHeight="192.0" prefWidth="252.0" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="486.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
                         <Label layoutX="356.0" layoutY="251.0" text="Comentarios:" />
-                        <Button fx:id="btnGp" layoutX="119.0" layoutY="288.0" mnemonicParsing="false" onAction="#genPreg" text="Generar Pregunta" />
-                        <ComboBox fx:id="cbxGrado" layoutX="199.0" layoutY="145.0" prefWidth="150.0" />
-                        <Label layoutX="146.0" layoutY="150.0" text="Grado" />
-                        <Label layoutX="15.0" layoutY="120.0" text="Tipo de Pregunta" />
-                        <ComboBox fx:id="cbxTipo" layoutX="134.0" layoutY="115.0" prefWidth="150.0" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="474.0" AnchorPane.topAnchor="115.0" />
+                        <Button fx:id="btnGp" layoutX="172.0" layoutY="281.0" mnemonicParsing="false" onAction="#genPreg" text="Generar Pregunta" />
+                        <ComboBox fx:id="cbxGrado" layoutX="134.0" layoutY="192.0" prefWidth="150.0" />
+                        <Label layoutX="25.0" layoutY="197.0" text="Grado" />
+                        <Label layoutX="9.0" layoutY="161.0" text="Tipo de Pregunta" />
+                        <ComboBox fx:id="cbxTipo" layoutX="134.0" layoutY="156.0" prefHeight="21.0" prefWidth="150.0" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="474.0" AnchorPane.topAnchor="156.0" />
                      </children>
                   </AnchorPane>
                </content></Tab>
-            <Tab text="Imprimir Prueba">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <AnchorPane layoutX="4.0" layoutY="-1.0" prefHeight="324.0" prefWidth="803.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-49.0" AnchorPane.topAnchor="-1.0" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
         </tabs>
       </TabPane>
    </children>

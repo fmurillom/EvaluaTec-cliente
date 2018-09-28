@@ -3,7 +3,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 public class Main extends Application {
 
     @Override
@@ -11,7 +10,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("views/mainView.fxml"));
         primaryStage.setTitle("EvaluaTec");
-        primaryStage.setScene(new Scene(root, 768, 358));
+        primaryStage.setScene(new Scene(root, 768, 559));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

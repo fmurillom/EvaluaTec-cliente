@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @XmlRootElement(name = "Pregunta")
+/**
+ * Clase encargada de modelar los campos y el comportamiento de una pregunta de amrque con X
+ */
 public class MargueX extends Pregunta {
 
     List<String> respuestas;

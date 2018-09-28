@@ -15,9 +15,15 @@ import java.util.List;
 
 public class dessViewCont {
 
+    /**
+     * Variable para modificar el slider
+     */
     @FXML
     private Spinner<Integer> sliderNum;
 
+    /**
+     * Variable para hacer referencia al comboBox de temas
+     */
     @FXML
     private ComboBox<String> cmbTheme;
 
@@ -48,8 +54,13 @@ public class dessViewCont {
     }
 
 
+
     @FXML
+    /**
+     * Funcion encargada de generar xml de pregunta y enviarlo al servidor para crear una pregunta nueva
+     */
     private void addQuest(){
+
         Themes themes = null;
 
         for(Themes tema : Globals.getThemesEv()){

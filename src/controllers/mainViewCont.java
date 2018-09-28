@@ -68,6 +68,31 @@ public class mainViewCont {
     @FXML
     private ComboBox<String> cbxTipo;
 
+    @FXML
+    private CheckBox chkQ;
+
+    @FXML
+    private CheckBox chkE;
+
+    @FXML
+    private CheckBox chkResp;
+
+    @FXML
+    private ComboBox<String> cmbUni;
+
+    @FXML
+    private ComboBox<String> cmbAreaA;
+
+    @FXML
+    private ComboBox<String> cmbEscuela;
+
+    @FXML
+    private TextField txtSemestre;
+
+
+
+
+
 
     public mainViewCont(){};
 
@@ -80,6 +105,8 @@ public class mainViewCont {
         }
 
         List<Curso> cursos;
+
+        List<Universidad> universidades = new LinkedList<>();
 
         List<String> grado = new LinkedList<>();
 
@@ -118,11 +145,26 @@ public class mainViewCont {
 
         cbxTipo.setItems(comboTipo);
 
+        universidades = XMLizer.getXmlUni("Universidades", "Universidad");
 
+        List<String> unisAux = new LinkedList<>();
+
+        for(Universidad uni : universidades){
+            unisAux.add(uni.getNombre());
+        }
+
+        ObservableList<String> unisAuxC = FXCollections.observableArrayList(unisAux);
+
+        cmbUni.setItems(unisAuxC);
+
+        Globals.setUnis(universidades);
 
     }
 
     @FXML
+    /**
+     * Funcion encargada de crear en pantalla la ventana para agregar preguntras de marque con X
+     */
     private void markX() throws IOException {
 
         if(cmbCurso.getValue() == null){
@@ -142,6 +184,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada de crear en pantalla la ventana para agregar preguntras de respuesta corta
+     */
     private void respC() throws IOException {
 
         if(cmbCurso.getValue() == null){
@@ -161,6 +206,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada de crear en pantalla la ventana para agregar preguntras de desarrollo
+     */
     private void dess() throws IOException {
 
         if(cmbCurso.getValue() == null){
@@ -180,6 +228,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada de refrescar el arbol con los temas que se desean agregar a la prueba.
+     */
     private void refreshTree(){
         TreeItem<String> rootNode = new TreeItem<>("Temas a Evaluar");
         rootNode.setExpanded(true);
@@ -202,6 +253,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada verificar si los otros checkbox se encuentran marcados para asi no seleccionar 2 del mismo tipo
+     */
     private void ActivateCheckBox(){
         if(chkX.isSelected()){
             txtBxA.setDisable(false);
@@ -228,6 +282,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada de refrescar los contenidos del combo Box de temas dependiendo del curso seleccionado.
+     */
     private void refreshCbx(){
         System.out.println(cmbCourse.getValue());
         if(cmbCourse.getValue().equals("")){
@@ -252,6 +309,9 @@ public class mainViewCont {
     }
 
     @FXML
+    /**
+     * Funcion encargada de generar y enviar el xml de una nueva pregunta al servidor
+     */
     public void genPreg() throws JAXBException {
         if(chkX.isSelected()){
 
@@ -274,4 +334,30 @@ public class mainViewCont {
         }
     }
 
+    @FXML
+    /**
+     * Funcion encargada de rellenar los items del comboBox dependiendo de las escuelas y areas academicas de cada universidad.
+     */
+    private void fillCmb(){
+        if(!cmbUni.getValue().equals("")){
+            Universidad uniAux = null;
+            for(Universidad uni : Globals.getUnis()){
+                if(uni.getNombre().equals(cmbUni.getValue())){
+                    uniAux =  uni;
+                }
+            }
+
+            if(uniAux != null){
+                ObservableList<String> escuelas = FXCollections.observableArrayList(uniAux.getEscuelas());
+                cmbEscuela.setItems(escuelas);
+
+                ObservableList<String> areaA = FXCollections.observableArrayList(uniAux.getAreasA());
+
+                cmbAreaA.setItems(areaA);
+
+                ObservableList<String> cursos = FXCollections.observableArrayList(uniAux.getCursos());
+
+            }
+        }
+    }
 }

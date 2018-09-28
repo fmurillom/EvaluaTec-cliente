@@ -15,6 +15,13 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class XMLtoPDF {
+    /***
+     * Funcion encargada de convertir un XML de preguntas a un PDF
+     * @param type tipo de prueba a convertir ya sea quiz o examen
+     * @throws IOException
+     * @throws DocumentException
+     * @throws TransformerException
+     */
     public static void convert(String type) throws IOException, DocumentException, TransformerException {
         TransformerFactory tFactory = TransformerFactory.newInstance();
         Transformer transformer = tFactory.newTransformer(new StreamSource("src/" + type + ".xsl"));

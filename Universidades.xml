@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Universidades>
+    <Universidad>
+        <Nombre>Instituto Tec de Costa Rica</Nombre>
+        <Escuela>Ing en computadores</Escuela>
+        <Escuela>Computacion</Escuela>
+        <AreaA>Area de Ingenieria en Computadores</AreaA>
+        <Curso>Lenguajes Comp e Interpretes</Curso>
+    </Universidad>
+</Universidades>

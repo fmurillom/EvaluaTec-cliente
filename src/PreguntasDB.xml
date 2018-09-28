@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DB>
+    <Curso>
+        <Nombre>Lenguajes Comp e Inter</Nombre>
+        <MarqueX>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+            <Pregunta>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+
+            <Pregunta>
+                <Enunciado>Enunciado 3</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+        </MarqueX>
+
+        <Corta>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Corta>
+
+        <Desarrollo>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Desarrollo>
+    </Curso>
+    <Curso>
+        <Nombre>Datos II</Nombre>
+        <MarqueX>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+            <Pregunta>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+
+            <Pregunta>
+                <Enunciado>Enunciado 3</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+        </MarqueX>
+
+        <Corta>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Corta>
+
+        <Desarrollo>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Desarrollo>
+    </Curso>
+    <Curso>
+        <Nombre>Bases de Datos</Nombre>
+        <MarqueX>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+            <Pregunta>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+
+            <Pregunta>
+                <Enunciado>Enunciado 3</Enunciado>
+                <Opcion1>Op1</Opcion1>
+                <Opcion2>Op2</Opcion2>
+                <Opcion3>Op3</Opcion3>
+                <Opcion4>Op4</Opcion4>
+            </Pregunta>
+        </MarqueX>
+
+        <Corta>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Corta>
+
+        <Desarrollo>
+            <Pregunta>
+                <Enunciado>Enunciado 1</Enunciado>
+                <Enunciado>Enunciado 2</Enunciado>
+                <Enunciado>Enunciado 3</Enunciado>
+            </Pregunta>
+        </Desarrollo>
+    </Curso>
+</DB>
