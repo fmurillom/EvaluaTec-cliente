@@ -1,5 +1,6 @@
 package Server;
 import java.io.*;
+/home/luis/IdeaProjects/EvaluaTec-cliente
 import java.net.*;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,7 +25,7 @@ public class Server implements Runnable{
             toServer.println("Conexion");
             String line = fromServer.readLine();
             while(!line.contentEquals("--0--")){
-                
+
             }
             System.out.println("Server shutting Down");
             toServer.close();
