@@ -8,5 +8,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="javax.xml-1.3.4" level="project" />
+    <orderEntry type="library" name="core-renderer-minimal" level="project" />
+    <orderEntry type="library" name="core-renderer" level="project" />
+    <orderEntry type="library" name="iText-2.0.8" level="project" />
+    <orderEntry type="library" name="xml-apis-xerces-2.9.1" level="project" />
   </component>
 </module>
