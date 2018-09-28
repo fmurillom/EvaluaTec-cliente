@@ -1,6 +1,5 @@
 package Server;
 import java.io.*;
-/home/luis/IdeaProjects/EvaluaTec-cliente
 import java.net.*;
 import java.util.LinkedList;
 import java.util.Queue;
