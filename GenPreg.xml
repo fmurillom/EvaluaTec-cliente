@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Pregunta>
-    <Comentario></Comentario>
+    <Comentario>adios esto ya sirve</Comentario>
     <Curso>Lenguajes Comp e Inter</Curso>
-    <Enunciado>Como me llamo</Enunciado>
-    <Grado>Quiz</Grado>
+    <Enunciado>Holis todo bien</Enunciado>
+    <Tema>Funcional</Tema>
     <Tipo>X</Tipo>
-    <Correcta>Ninguno</Correcta>
-    <Opciones>Marco</Opciones>
-    <Opciones>No Marco</Opciones>
-    <Opciones>Ultra Marco</Opciones>
+    <Correcta>c</Correcta>
+    <Opciones>a</Opciones>
+    <Opciones>b</Opciones>
+    <Opciones>d</Opciones>
 </Pregunta>
